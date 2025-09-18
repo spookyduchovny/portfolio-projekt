@@ -1,0 +1,50 @@
+//Farver
+$background-color: #0a0a0a;
+$shadow-color: $green-soft;
+$border-color: $green-neon;
+
+//Typografi
+$heading-font: 'Courier New', monospace;
+$paragraph-font: 'Courier New', monospace;
+
+//Paddings, Margins og lign.
+$padding-normal: 1rem;
+$side-margin: 10%;
+$btn-radius: 8px;
+
+/*mixins*/
+
+@mixin btn($bg-color: $green-neon, $text-color: $text-light, $padding: 0.8rem, $radius: $btn-radius) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: $padding;
+    border-radius: $btn-radius;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    text-shadow: 0 0 5px $bg-color;
+    
+    &:hover {
+      background-color: darken($bg-color, 10%);
+      box-shadow: 0 0 10px $bg-color;
+    }
+  }
+
+@mixin heading-style($size, $shadow-color: $green-soft) {
+    font-family: $heading-font;
+    font-weight: 300;
+    text-align: center;
+    padding: $padding-normal;
+    color: $shadow-color;
+    text-shadow: 0 0 5px $shadow-color;
+    font-size: $size;
+  }
+
+  @mixin box-style($bg-color, $border-color, $radius: $btn-radius, $shadow-color: $green-neon) {
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    box-shadow: 0 0 10px $shadow-color;
+  }
