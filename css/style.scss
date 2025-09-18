@@ -1,5 +1,22 @@
 @use 'partial'; // Henter partial filen ind som modul
 
+//Generel styling
+body{
+  background-color: partial.$background-color;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h2, h3{
+      font-family: partial.$paragraph-font;
+      color: white;
+      -webkit-text-stroke: 1px black;
+}
+
+h2{
+  font-size: 200px;
+}
+
+
 //Fonts
 @font-face {
     font-family: 'Pixelify';
@@ -8,13 +25,16 @@
     font-style: normal;
 }
 
-//Generel styling
-body{
-  background-color: #87CEFA;
-  font-family: 'Courier New', Courier, monospace;
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-VariableFont_opsz\_wght.ttf) format('truetype');
+    font-weight: 100 900; /* variable range */
+    font-style: normal;
 }
 
-h2{
-  font-size: 200px;
+@font-face {
+    font-family: 'Overpass';
+    src: url(../fonts/OverpassMono-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900; /* variable range */
+    font-style: normal;
 }
-
