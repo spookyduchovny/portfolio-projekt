@@ -16,6 +16,82 @@ h2{
   font-size: 200px;
 }
 
+img{
+max-width: 100%;
+}
+
+//Forside
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 60px; // Prevent overlap with bottom bar
+}
+
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 48px 32px 0 48px;
+  min-width: 0;
+}
+
+h2, h3 {
+  text-align: left;
+  margin: 0;
+}
+
+h2 {
+  font-size: 10vw; // Responsive size
+  max-width: 90%;
+}
+
+h3 {
+  font-size: 4vw;
+  margin-top: 24px;
+  max-width: 90%;
+}
+
+.forside-ikoner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  margin-top: 48px;
+  width: 100%;
+}
+
+.forside-ikoner a {
+  font-size: 96px; // Double typical icon size
+  color: #444;
+  background: #eee;
+  border-radius: 16px;
+  padding: 16px;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.forside-ikoner a:hover {
+  background: #ccc;
+  color: #222;
+}
+
+.img-man {
+  max-width: 40vw;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-end;
+  margin-right: 48px;
+  margin-top: 48px;
+  max-height: calc(100vh - 120px); // Prevent scrolling, fits in window
+  width: auto;
+  display: block;
+}
 
 //Fonts
 @font-face {
@@ -37,4 +113,72 @@ h2{
     src: url(../fonts/OverpassMono-VariableFont_wght.ttf) format('truetype');
     font-weight: 100 900; /* variable range */
     font-style: normal;
+}
+
+.bottom-header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; // Fill entire screen width
+  z-index: 100;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: flex-end;
+  background: #444;
+  height: 60px;
+  width: 100%; // Fill entire screen width
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.menu-btn {
+  background: #666;
+  color: #fff;
+  border: none;
+  padding: 0 24px;
+  height: 60px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 0 8px 0 0;
+  width: 220px; // Only left side
+  text-align: left;
+}
+
+.bottom-nav {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  width: 220px;
+  background: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  transition: max-height 0.3s, padding 0.3s;
+  overflow: hidden;
+  max-height: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.bottom-header.open .bottom-nav {
+  max-height: 200px;
+  padding: 24px 0 24px 0;
+}
+
+.bottom-nav a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 8px 24px;
+  transition: color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bottom-nav a:hover {
+  color: #ccc;
+  background: #555;
 }
