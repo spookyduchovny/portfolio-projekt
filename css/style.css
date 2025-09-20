@@ -64,17 +64,14 @@ h3 {
 
 .forside-ikoner a {
   font-size: 96px;
-  color: #444;
-  background: #eee;
-  border-radius: 16px;
+  color: darkblue;
   padding: 16px;
   transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .forside-ikoner a:hover {
-  background: #ccc;
-  color: #222;
+  background: darkblue;
+  color: darkblue;
 }
 
 .img-man {
@@ -174,4 +171,91 @@ h3 {
 .bottom-nav a:hover {
   color: #ccc;
   background: #555;
-}/*# sourceMappingURL=style.css.map */
+}
+.ikon-item {
+  display: inline-block;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.ikon-text {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-family: 'Pixelify';
+  font-size: 1.2em;
+  color: #222;
+}
+.nav-header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.home-icon {
+  width: 40px;
+  height: 40px;
+}
+.windows-folder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 840px;           /* doubled from 420px */
+  min-height: 500px;      /* add a minimum height for folder feel */
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.folder-bar {
+  background: #e0e0e0;
+  padding: 12px 18px;
+  font-family: 'Pixelify', sans-serif;
+  font-size: 1.3em;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.folder-title {
+  font-weight: bold;
+}
+
+.folder-content {
+  padding: 32px 0 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-icons {
+  display: flex;
+  gap: 48px;
+  justify-content: flex-start; /* align icons to the left */
+  width: 100%;
+  padding-left: 48px;          /* add left padding for spacing */
+}
+
+.folder-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.folder-icon-item img {
+  width: 128px;    /* doubled from 64px */
+  height: 128px;   /* doubled from 64px */
+  margin-bottom: 10px;
+}
+
+.folder-icon-text {
+  font-family: 'Pixelify', sans-serif;
+  font-size: 1em;
+  color: #222;
+  margin-top: 2px;
+}

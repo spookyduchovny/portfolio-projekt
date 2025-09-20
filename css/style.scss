@@ -68,17 +68,14 @@ h3 {
 
 .forside-ikoner a {
   font-size: 96px; // Double typical icon size
-  color: #444;
-  background: #eee;
-  border-radius: 16px;
+  color: darkblue;
   padding: 16px;
   transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .forside-ikoner a:hover {
-  background: #ccc;
-  color: #222;
+  background: darkblue;
+  color: darkblue;
 }
 
 .img-man {
