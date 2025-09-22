@@ -10,3 +10,8 @@ document.querySelectorAll('.cv-tab').forEach(tab => {
     document.getElementById(tab.dataset.tab).style.display = 'block';
   });
 });
+
+document.getElementById('back-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  history.back();
+});
