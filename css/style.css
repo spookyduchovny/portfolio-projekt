@@ -23,8 +23,6 @@ body {
 
 h2, h3 {
   font-family: "Inter", sans-serif;
-  color: white;
-  -webkit-text-stroke: 1px black;
 }
 
 h2 {
@@ -55,17 +53,19 @@ img {
   min-width: 0;
 }
 
-h2, h3 {
+.container-main h2, h3 {
   text-align: left;
   margin: 0;
 }
 
-h2 {
+.container-main h2 {
   font-size: 10vw;
   max-width: 90%;
+  color: white;
+  -webkit-text-stroke: 1px black;
 }
 
-h3 {
+.container-main h3 {
   font-size: 4vw;
   margin-top: 24px;
   max-width: 90%;
@@ -88,8 +88,7 @@ h3 {
 }
 
 .forside-ikoner a:hover {
-  background: darkblue;
-  color: darkblue;
+  filter: brightness(0.8) drop-shadow(0 0 4px blue);
 }
 
 .img-man {
@@ -373,7 +372,7 @@ h3 {
   align-items: flex-start;
   gap: 48px;
   margin: 48px auto;
-  max-width: 1100px;
+  max-width: 100%;
 }
 
 .cv-left, .cv-right {
@@ -381,7 +380,7 @@ h3 {
   border: 2px solid #444;
   border-radius: 18px;
   padding: 32px 24px;
-  width: 420px;
+  width: 40%;
   min-height: 600px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   display: flex;
@@ -397,8 +396,8 @@ h3 {
 }
 
 .cv-img {
-  width: 90px;
-  height: 90px;
+  width: 180px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -407,22 +406,28 @@ h3 {
 }
 
 .cv-name {
-  font-family: "Pixelify", sans-serif;
-  font-size: 1.3em;
+  font-family: "Inter", sans-serif;
+  font-size: 2.3em;
   color: #222;
 }
 
 .cv-left h2 {
-  font-family: "Pixelify", sans-serif;
-  font-size: 1.2em;
+  font-family: "Inter", sans-serif;
+  font-size: 2.2em;
   margin-bottom: 12px;
   margin-top: 0;
 }
 
 .cv-left p {
   font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 1.3em;
   color: #222;
+  margin-top: 0;
+}
+
+.cv-right h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2em;
   margin-top: 0;
 }
 
@@ -442,7 +447,8 @@ h3 {
   border-right: 1px solid #b0b0b0;
   border-radius: 0;
   padding: 10px 24px;
-  font-family: "Pixelify", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   font-size: 1.1em;
   cursor: pointer;
   transition: background 0.2s;
@@ -471,17 +477,6 @@ h3 {
   min-height: 400px;
   width: 100%;
   box-sizing: border-box;
-}
-
-.cv-tab-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.cv-tab-content li {
-  margin-bottom: 10px;
-  font-size: 1em;
 }
 
 .project-topbar {
