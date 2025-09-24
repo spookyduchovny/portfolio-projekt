@@ -479,6 +479,89 @@ img {
   box-sizing: border-box;
 }
 
+.backpack-element {
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+  background: #5b5143;
+  border-radius: 20px;
+  border: 2px solid #3a332a;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Overpass", monospace;
+}
+
+.backpack-icons {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 8px;
+  padding: 32px 24px 16px 24px;
+  overflow-y: auto;
+  background: transparent;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: filter 0.2s;
+}
+
+.icon img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #3a332a;
+  border: 1px solid #2a241c;
+  transition: box-shadow 0.2s;
+}
+
+.icon span {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 2px;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px #000;
+}
+
+.icon:hover img,
+.icon.selected img {
+  box-shadow: 0 0 0 3px #fff, 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.backpack-divider {
+  height: 3px;
+  background: #fff;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.backpack-description {
+  flex: 1;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 24px 24px 0 24px;
+  border-radius: 18px;
+  margin: 0 16px 16px 16px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  min-height: 100px;
+  display: flex;
+  align-items: flex-start;
+}
+
 .project-topbar {
   display: flex;
   align-items: center;
