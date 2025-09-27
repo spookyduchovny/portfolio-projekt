@@ -532,7 +532,7 @@ body.portfolio-page {
 .project-icon {
   width: 56px;
   height: 56px;
-  margin-right: 18px;
+  margin: 18px;
 }
 
 .project-title {
@@ -774,7 +774,7 @@ body.portfolio-page {
     margin-top: 0.3em;
     width: 100vw;
     height: 70px;
-    background: #444;
+    background: #f8f8f8;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -788,7 +788,7 @@ body.portfolio-page {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: lightblue;
     text-decoration: none;
     font-size: 0.85em;
     padding: 0;
@@ -801,14 +801,13 @@ body.portfolio-page {
   }
   .mobile-taskbar a span {
     font-size: 0.8em;
-    color: #fff;
+    color: black;
     margin-top: 2px;
     letter-spacing: 1px;
   }
   .mobile-taskbar a:active,
   .mobile-taskbar a:hover {
-    background: #555;
-    color: #e0e0e0;
+    background: lightblue;
   }
 }
 @media (max-width: 600px) { // Phone size
