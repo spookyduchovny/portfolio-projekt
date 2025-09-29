@@ -41,14 +41,14 @@ max-width: 100%;
 }
 
 //Forside
+
 .container-main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  min-height: 100vh;
   box-sizing: border-box;
-  padding-bottom: 60px; // Prevent overlap with bottom bar
+  margin-bottom: 5%;
 }
 
 .container-intro {
@@ -64,11 +64,12 @@ max-width: 100%;
 .container-main h2, h3 {
   text-align: left;
   margin: 0;
+  padding-left:10%;
 }
 
 .container-main h2 {
-  font-size: 10vw; // Responsive size
-  max-width: 90%;
+  font-size: 8vw; // Responsive size
+  max-width: 100%;
   color: white;
   -webkit-text-stroke: 1px black;
 }
@@ -77,6 +78,33 @@ max-width: 100%;
   font-size: 4vw;
   margin-top: 24px;
   max-width: 90%;
+  margin-bottom: 10%;
+}
+
+.img-man {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 48px;
+  margin-top: 48px;
+  max-height: 65vh;
+  display: block;
+  transform: scaleX(-1);
+}
+
+.ikon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.ikon-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 80px;
 }
 
 .forside-ikoner {
@@ -84,7 +112,6 @@ max-width: 100%;
   justify-content: center;
   align-items: center;
   gap: 48px;
-  margin-top: 48px;
   width: 100%;
 }
 
@@ -98,32 +125,6 @@ max-width: 100%;
 .forside-ikoner a:hover {
   filter: brightness(0.8) drop-shadow(0 0 4px blue);
 }
-
-.ikon-item img {
-  width: 20vw;
-  max-width: 80px;
-  min-width: 40px;
-  height: auto;
-  object-fit: contain;
-}
-
-.img-man {
-  max-width: 40vw;
-  height: auto;
-  object-fit: contain;
-  align-self: flex-end;
-  margin-right: 48px;
-  margin-top: 48px;
-  max-height: calc(100vh - 120px); // Prevent scrolling, fits in window
-  width: auto;
-  display: block;
-}
-
-  .home-icon {
-    width: 64px; // Match forside-ikoner size
-    height: 64px;
-    display: block;
-  }
 
 //Portfolio-side
 .windows-folder {
@@ -170,7 +171,7 @@ max-width: 100%;
 }
 
 .folder-x:hover {
-  filter: brightness(0.8) drop-shadow(0 0 4px #d32f2f);
+  filter: brightness(0.8) drop-shadow(0 0 4px #20d346);
 }
 
 .folder-content {
@@ -247,24 +248,26 @@ body.portfolio-page {
   align-items: flex-start;
   gap: 48px;
   margin: 48px auto;
-  max-width: 900px;
+  max-width: 80%;
 }
 
 .kontakt-info {
   background: #fff;
   border: 2px solid #8ecae6;
   border-radius: 12px;
-  padding: 32px 24px;
-  width: 340px;
+  padding: 48px 36px;       
+  width: 40%;       
+  max-width: 100%;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  font-size: 1.15em;  
 }
 
 .kontakt-img {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 18px;
@@ -275,7 +278,7 @@ body.portfolio-page {
   font-family: 'Pixelify', sans-serif;
   font-size: 1.3em;
   margin-bottom: 12px;
-  text-align: center;
+  text-align: left;
 }
 
 .kontakt-info p {
@@ -285,11 +288,34 @@ body.portfolio-page {
   text-align: left;
 }
 
+.kontakt-socials {
+  gap: 32px 40px; 
+  margin: 18px 0 18px 0;
+}
+.kontakt-socials a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #222;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.kontakt-socials a:hover {
+  color: #3a6ea5;
+}
+.kontakt-socials i {
+  font-size: 1.5em;
+}
+
 .kontakt-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  width: 340px;
+  gap: 24px;            
+  width: 40%;           
+  max-width: 100%;
+  padding: 48px 36px;    
+  font-size: 1.6em;      
 }
 
 .kontakt-form input,
@@ -559,6 +585,7 @@ body.portfolio-page {
 
 .project-back {
   margin-left: auto;
+  margin-right: 20px;
   display: flex;
   align-items: center;
 }
@@ -635,34 +662,42 @@ body.portfolio-page {
 
 .project-btn {
   margin-top: 24px;
-  align-self: center; 
-  padding: 10px 16px;
-  background: #c0c0c0;
-  border: 2px solid;
-  border-top-color: #fff;
-  border-left-color: #fff;
-  border-right-color: #404040;
-  border-bottom-color: #404040;
+  align-self: center;
+  padding: 10px 28px;
+  background: linear-gradient(to bottom, #fffbe6 0%, #FFC049 80%, #e6a800 100%);
+  border: 2px solid #bfa14a;
+  border-radius: 8px;
   font-family: "Tahoma", sans-serif;
-  font-size: 14px;
+  font-size: 1.1em;
   font-weight: bold;
+  color: #222;
   cursor: pointer;
-  box-shadow: inset -1px -1px #808080, inset 1px 1px #fff;
+  box-shadow: 0 2px 8px #0002, inset 0 1px 0 #fff8, inset 0 -2px 8px #e6a80044;
+  text-shadow: 0 1px 0 #fff, 0 0px 2px #fff8;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
 
   &:hover {
-    background: #d6d6d6;
+    background: linear-gradient(to bottom, #fffbe6 0%, #ffd36b 80%, #FFC049 100%);
+    border-color: #e6a800;
+    color: #111;
   }
 
   &:active {
-    border-top-color: #404040;
-    border-left-color: #404040;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    background: #a0a0a0;
+    background: linear-gradient(to bottom, #ffe9b3 0%, #FFC049 100%, #e6a800 100%);
+    border-color: #bfa14a;
+    box-shadow: 0 1px 2px #0004 inset;
+    color: #333;
   }
 }
 
+
 //Menu-bar
+.home-icon {
+    width: 64px; // Match forside-ikoner size
+    height: 64px;
+    display: block;
+  }
+  
 .bottom-header {
   position: fixed;
   left: 0;
@@ -771,7 +806,7 @@ body.portfolio-page {
     gap: 0;
   }
   .cv-left, .cv-right {
-    width: 100%;
+    width: 93%;
     min-width: 0;
     margin: 0;
     border-radius: 18px 18px 0 0;
@@ -822,6 +857,63 @@ body.portfolio-page {
   .mobile-taskbar a:active,
   .mobile-taskbar a:hover {
     background: lightblue;
+  }
+    .kontakt-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .kontakt-info,
+  .kontakt-form {
+    width: 100%;
+    margin-bottom: 32px;
+    max-width: 100%;
+  }
+  .project-topbar {
+    max-width: 600px;
+    width: 100%;
+    margin: 24px auto 0 auto;
+    border-radius: 18px 18px 0 0;
+    flex-direction: row;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .project-left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #222;
+    align-items: center;
+    padding: 32px 20px 16px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-img {
+    margin: 0 auto 16px auto;
+    display: block;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+
+  .project-right {
+    width: 95%;
+    padding: 24px 20px 40px 20px;
+    border-radius: 0 0 18px 18px;
   }
 }
 @media (max-width: 600px) { // Phone size
@@ -879,5 +971,22 @@ body.portfolio-page {
   .app-icon:hover {
     background: #6c5c3e;
     box-shadow: 0 4px 16px #0006;
+  }
+  .img-man {
+    display: none;
+  }
+    .forside-ikoner {
+    gap: 24px;
+    margin-top: 24px;
+    margin-bottom: 80px; // More space for mobile taskbar
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ikon-item img {
+    max-width: 64px;
+  }
+  .forside-ikoner a {
+    font-size: 48px;
+    padding: 8px;
   }
 }
