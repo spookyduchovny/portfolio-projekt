@@ -797,6 +797,9 @@ body.portfolio-page {
 .portfolio-apps {
   display: none;
 }
+.folder-close-mobile {
+  display: none; /* hidden by default */
+}
 
 // MEDIA QUERIES
 @media (max-width: 900px) { // Tablet size and below
@@ -988,5 +991,19 @@ body.portfolio-page {
   .forside-ikoner a {
     font-size: 48px;
     padding: 8px;
+  }
+  .folder-close-mobile {
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  .folder-close-mobile img {
+    width: 64px;
+    height: 64px;
   }
 }
