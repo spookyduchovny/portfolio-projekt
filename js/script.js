@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Rødt kryds tilbage-knap
-  const backBtn = document.getElementById('back-btn');
-  if (backBtn) {
-    backBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      history.back();
+  // Tilbage-knap
+  document.querySelectorAll('.folder-close, .folder-close-mobile, #back-btn, #back-btn-mobile')
+    .forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.back();
+      });
     });
-  }
 });
