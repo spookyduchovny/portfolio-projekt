@@ -44,12 +44,17 @@ max-width: 100%;
 //Forside
 
 .container-main {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto; 
+  grid-template-areas:
+    "intro img"
+    "icons img";
+  gap: 24px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 5%;
 }
 
 .container-intro {
@@ -59,38 +64,61 @@ max-width: 100%;
   justify-content: flex-start;
   padding: 48px 32px 0 48px;
   min-width: 0;
-}
-
-.container-main h2, h3 {
-  text-align: left;
-  margin: 0;
-  padding-left:10%;
+  grid-area: intro;
 }
 
 .container-main h2 {
-    font-size: 8vw; /* stadig responsiv */
-    color: white;
-    -webkit-text-stroke: 2px #000; /* lidt kraftigere outline */
-    margin-bottom: 0.5em;
+  font-size: 8vw; /* stadig responsiv */
+  color: white;
+  font-family: 'Pixelify', monospace;
+  -webkit-text-stroke: 2px #000; /* lidt kraftigere outline */
+  margin: 0 0 0.5em 0;
+  text-align: left;
 }
 
 .container-main h3 {
-    font-size: 2.5vw; /* lidt mindre end h2 */
-    color: white;
-    -webkit-text-stroke: 1px #000; /* lidt kraftigere outline */
-    margin-top: 1rem;
-    max-width: 90%;
+  font-size: 2.5vw; /* lidt mindre end h2 */
+  color: white;
+  font-family: 'Pixelify', monospace;
+  -webkit-text-stroke: 1px #000;
+  margin: 0;
+  margin-top: 1rem;
+  text-align: left;
+  max-width: 90%;
+  line-height: 1.5;
+}
+.img-container {
+  grid-area: img;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.img-man {
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+  margin: 0;
 }
 
-.img-man {
-  width: 100%;       
-  max-width: 710px;  
-  height: auto;   
-  object-fit: contain;
-  margin-right: 48px;
-  margin-top: 48px;
-  display: block;
-  transform: scaleX(-1);
+.forside-ikoner {
+  grid-area: icons;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;  // <-- gør at de ikke hænger nede i bunden
+  gap: 48px;
+  width: 100%;
+  padding-left: 48px;
+}
+
+.forside-ikoner a {
+  font-size: 96px;
+  color: darkblue;
+  padding: 16px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.forside-ikoner a:hover {
+  filter: brightness(0.8) drop-shadow(0 0 4px blue);
 }
 
 .ikon-item {
@@ -107,24 +135,15 @@ max-width: 100%;
   max-height: 80px;
 }
 
-.forside-ikoner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  width: 100%;
+.ikon-text {
+  margin-top: 8px;
+  font-family: 'Pixelify', monospace;
+  font-size: 1rem;
+  color: black;
 }
 
-.forside-ikoner a {
-  font-size: 96px; // Double typical icon size
-  color: darkblue;
-  padding: 16px;
-  transition: background 0.2s, color 0.2s;
-}
 
-.forside-ikoner a:hover {
-  filter: brightness(0.8) drop-shadow(0 0 4px blue);
-}
+
 
 //Portfolio-side
 .windows-folder {
@@ -850,31 +869,32 @@ body.portfolio-page {
   display: none; /* hidden by default */
 }
 
-// MEDIA QUERIES
-@media (max-width: 900px) { // Tablet size and below
+/* MEDIA QUERIES */
+
+/* Tablet og ned */
+@media (max-width: 900px) {
   .container-main {
-    flex-direction: column;   // stacked på mindre skærme
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
   }
 
-  @media (max-width: 900px) { // Tablet og ned
   .img-man {
-    display: none;
+    display: none !important;
   }
 
   .container-intro {
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center; // Centrerer indhold
+    align-items: center;
     justify-content: flex-start;
   }
 
   .forside-ikoner {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    justify-content: space-between; // Center hvert ikon
+    justify-content: space-between;
     margin-top: 32px;
     width: 80%;
   }
@@ -886,15 +906,12 @@ body.portfolio-page {
   }
 
   .ikon-item img {
-    max-width: 64px; // juster størrelse
+    max-width: 64px;
   }
 
   .forside-ikoner a {
     font-size: 48px;
     padding: 8px;
-  }
-  .img-man {
-    display: none;
   }
 
   .cv-container {
@@ -902,6 +919,7 @@ body.portfolio-page {
     align-items: stretch;
     gap: 24px;
   }
+
   .cv-left, .cv-right {
     width: 93%;
     min-width: 0;
@@ -910,18 +928,20 @@ body.portfolio-page {
     box-shadow: none;
     display: flex;
   }
-  
-  .cv-profile{
+
+  .cv-profile {
     flex-direction: column;
   }
 
-  .cv-name{
+  .cv-name {
     font-size: 1.7em;
     padding-top: 5%;
   }
+
   .bottom-header, .bottom-bar {
     display: none !important;
   }
+
   .mobile-taskbar {
     position: fixed;
     left: 0;
@@ -937,6 +957,7 @@ body.portfolio-page {
     border-top: 2px solid #222;
     box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
   }
+
   .mobile-taskbar a {
     flex: 1;
     display: flex;
@@ -949,32 +970,38 @@ body.portfolio-page {
     padding: 0;
     transition: background 0.2s, color 0.2s;
   }
+
   .mobile-taskbar a img {
     width: 32px;
     height: 32px;
     margin-bottom: 2px;
   }
+
   .mobile-taskbar a span {
     font-size: 0.8em;
     color: black;
     margin-top: 2px;
     letter-spacing: 1px;
   }
+
   .mobile-taskbar a:active,
   .mobile-taskbar a:hover {
     background: lightblue;
   }
-    .kontakt-container {
+
+  .kontakt-container {
     flex-direction: column;
     align-items: center;
     gap: 0;
   }
+
   .kontakt-info,
   .kontakt-form {
     width: 100%;
     margin-bottom: 32px;
     max-width: 100%;
   }
+
   .project-topbar {
     max-width: 600px;
     width: 100%;
@@ -1021,25 +1048,32 @@ body.portfolio-page {
     padding: 24px 20px 40px 20px;
     border-radius: 0 0 18px 18px;
   }
-  .home-link{
+
+  .home-link {
     display: none;
   }
 }
-@media (max-width: 600px) { // Phone size
+
+/* Mobil og ned */
+@media (max-width: 600px) {
   .cv-container {
     padding: 0;
   }
+
   .cv-left, .cv-right {
     padding: 16px 8px;
     font-size: 0.95em;
     margin-bottom: 0.5em;
   }
+
   .backpack-icons {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .windows-folder {
     display: none !important;
   }
+
   .portfolio-apps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1049,6 +1083,7 @@ body.portfolio-page {
     margin: 32px 0 90px 0;
     padding: 20% 16px;
   }
+
   .app-icon {
     display: flex;
     flex-direction: column;
@@ -1058,6 +1093,7 @@ body.portfolio-page {
     border-radius: 16px;
     padding: 12px 0 8px 0;
   }
+
   .app-icon img {
     width: 56px;
     height: 56px;
@@ -1071,6 +1107,7 @@ body.portfolio-page {
     letter-spacing: 1px;
     text-shadow: 0 1px 2px #000;
   }
+
   .app-icon:active,
   .app-icon:hover {
     background: #6c5c3e;
@@ -1091,5 +1128,4 @@ body.portfolio-page {
     width: 64px;
     height: 64px;
   }
-}
 }
