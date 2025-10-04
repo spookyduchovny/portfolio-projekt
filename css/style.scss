@@ -97,7 +97,7 @@ max-width: 100%;
   box-shadow: 0 1px 2px #fff inset;
   font-family: "Tahoma", Arial, sans-serif;
   font-weight: bold;
-  transition: background 0.2s, border 0.2s;
+  transition: background 0.2s, border 0.2s
 }
 
 .menu-btn:active {
@@ -503,11 +503,6 @@ body.portfolio-page {
   overflow: hidden;
 }
 
-.cv-left:hover, .cv-right:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-}
-
 .cv-profile {
   display: flex;
   align-items: center;
@@ -857,6 +852,36 @@ body.portfolio-page {
   }
 }
 
+//Webtilgængelighed
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+.scroll-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 //Dem der ikke skal vises i desktop
 .mobile-taskbar {
   display: none;
@@ -872,6 +897,7 @@ body.portfolio-page {
 
 /* Tablet og ned */
 @media (max-width: 900px) {
+
   .img-man {
     display: none !important;
   } 
