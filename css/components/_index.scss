@@ -1,0 +1,90 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.container-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto; 
+  grid-template-areas:
+    "intro img"
+    "icons img";
+  gap: clamp(12px, 2vw, 24px);
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 48px 32px 0 20%;
+  min-width: 0;
+  grid-area: intro;
+}
+
+.container-main h2 {
+  font-size: clamp(2rem, 8vw, 8rem);
+  margin: 0 0 0.5em 0;
+}
+
+.container-main h3 {
+  font-size: clamp(1.125rem, 2.5vw, 3rem);
+  margin: 0;
+  margin-top: 1rem;
+  max-width: 90%;
+  line-height: f.$line-height-base;
+}
+
+.img-container {
+  grid-area: img;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-height: 90vh;
+  width: 100%;
+  transform: scaleX(-1);
+  margin: 0;
+}
+
+.forside-ikoner {
+  grid-area: icons;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: clamp(16px, 4vw, 48px);
+  width: 100%;
+  padding-left: 20%;
+}
+
+.forside-ikoner a {
+  font-size: clamp(2rem, 6vw, 6rem);
+  padding: clamp(8px, 1.5vw, 16px);
+  transition: background 0.2s, color 0.2s;
+}
+
+.forside-ikoner a:hover {
+  filter: brightness(0.8);
+}
+
+.ikon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(20px, 5vw, 60px);
+}
+
+.ikon-item img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: clamp(48px, 8vw, 80px);
+}
+
+.ikon-text {
+  margin-top: 8px;
+  font-family: f.$retro-font;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  color: c.$black;
+}

@@ -1,0 +1,158 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.cv-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 48px;
+  margin: 48px auto;
+  max-width: 1400px;
+  padding: 1rem;
+  font-family: f.$base-font;
+  color: c.$text-dark;
+}
+
+.cv-left, .cv-right {
+  width: 40%;
+  padding: 32px 24px;
+  background: c.$white;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cv-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.cv-img {
+  width: clamp(120px, 12vw, 180px);
+  height: clamp(120px, 12vw, 180px);
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid c.$accent; /* moderne accentfarve */
+  margin-right: 18px;
+}
+
+.cv-name {
+  font-size: clamp(1.4rem, 3.5vw, 2.3rem);
+  color: c.$accent;
+  font-weight: 600;
+  font-family: f.$heading-font;
+}
+
+.cv-left h3 {
+  font-size: 2em;
+  margin-bottom: 12px;
+  margin-top: 0;
+  color: c.$accent;
+  border-bottom: 2px solid c.$gray-border;
+  padding-bottom: 0.5rem;
+  font-family: f.$heading-font;
+}
+
+.cv-left p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: c.$text-dark;
+  margin-top: 0;
+  padding: 10px;
+  line-height: f.$line-height-base;
+  font-family: f.$base-font;
+}
+
+.interests {
+  list-style: none;
+  padding: 0;
+}
+
+.interests li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1em, 2vw, 1.2rem);
+  font-family: f.$base-font;
+}
+
+.interests li i {
+  margin-right: 0.6rem;
+  color: c.$accent;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.cv-right h3 {
+  font-size: 1.6em;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0.5em;
+  color: c.$accent;
+  border-bottom: 2px solid c.$gray-border;
+  padding-bottom: 0.25rem;
+  font-family: f.$heading-font;
+}
+
+/* Tabs */
+.cv-tabs {
+  display: flex;
+  margin-bottom: 18px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  background: c.$gray-light;
+}
+
+.cv-tab {
+  background: c.$gray-light;
+  color: c.$text-dark;
+  border: none;
+  padding: clamp(8px, 1.8vw, 12px) clamp(12px, 2.2vw, 24px);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+  border-right: 1px solid c.$gray-border;
+  font-family: f.$base-font;
+}
+
+.cv-tab:last-child {
+  border-right: none;
+}
+
+.cv-tab.active,
+.cv-tab:hover {
+  background: c.$accent;
+  color: c.$white;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Tab Content */
+.cv-tab-content {
+  font-size: 1em;
+  color: c.$text-dark;
+  background: c.$white;
+  border-radius: 0 0 16px 16px;
+  padding: 0 4px;
+  min-height: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: f.$base-font;
+}
+
+/* Skills section */
+.skills-section {
+  border-radius: 12px;
+  padding: 0; 
+  margin-bottom: 16px;
+  background: c.$gray-light;
+  font-family: f.$base-font;
+}
+
+.skills-section p {
+  margin: 8px 0;
+  line-height: f.$line-height-base;
+}

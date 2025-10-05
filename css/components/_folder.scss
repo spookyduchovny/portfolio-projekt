@@ -1,0 +1,95 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.windows-folder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 840px; 
+  min-height: 500px;
+  background: c.$white;
+  border: 2px solid c.$gray-border;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.folder-bar {
+  background: c.$gray-border;
+  padding: 12px 18px;
+  font-family: f.$retro-font;
+  font-size: 1.3em;
+  color: c.$text-dark;
+  border-bottom: 1px solid c.$gray-border;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.folder-title {
+  font-size: clamp(1.2rem, 2vw, 2rem); 
+  font-family: f.$retro-font;
+  color: c.$text-dark;
+  margin: 0;
+  font-weight: normal;
+}
+
+.folder-back {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.folder-arrow {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.folder-arrow:hover {
+  filter: brightness(0.8);
+}
+
+.folder-content {
+  padding: 32px 0 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.folder-icons {
+  display: flex;
+  gap: 48px;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 48px;
+}
+
+.folder-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.folder-icon-item:hover img {
+  transform: scale(1.08);
+  transition: transform 0.2s;
+}
+
+.folder-icon-item img {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 10px;
+}
+
+.folder-icon-text {
+  font-family: f.$retro-font;
+  font-size: 1em;
+  color: c.$text-dark;
+  margin-top: 2px;
+  text-align: center; 
+}

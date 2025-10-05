@@ -1,0 +1,44 @@
+//Fonts
+@font-face {
+    font-family: 'Pixelify';
+    src: url(../fonts/PixelifySans-VariableFont_wght.ttf) format('truetype');
+    font-weight: 100 900; /* variable range */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-VariableFont_opsz\_wght.ttf) format('truetype');
+    font-weight: 100 900; /* variable range */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: 100 900; /* variable range */
+    font-style: normal;
+}
+
+// Typografi
+$heading-font: 'Roboto', sans-serif; 
+$base-font: 'Inter', sans-serif;  
+$retro-font: 'Pixelify', sans-serif;  
+
+// Standard font størrelser
+$font-size-base: 16px;
+$font-size-small: 0.875rem;   // små tekster
+$font-size-medium: 1rem;      // normal tekst
+$font-size-large: 1.25rem;    // større tekst
+$font-size-xlarge: 2rem;      // headings
+$font-size-xxlarge: 3rem;     // store headings
+
+// Linjehøjde
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-heavy: 900;

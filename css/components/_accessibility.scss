@@ -1,0 +1,17 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: c.$black;
+  color: c.$white;
+  padding: 8px 16px;
+  z-index: 1000;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}

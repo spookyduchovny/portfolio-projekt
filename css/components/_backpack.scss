@@ -1,0 +1,75 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.backpack-element {
+  width: 100%;
+  max-width: 500px;
+  height: 600px;
+  margin: 0 auto;
+  background: c.$gray-light;
+  border: 1px solid c.$gray-border;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.backpack-icons {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: f.$base-font;
+}
+
+.icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  border: none;
+  background: c.$white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icon span {
+  color: c.$text-dark;
+  font-size: 1rem;
+}
+
+.icon:hover img,
+.icon.selected img {
+  transform: translateY(-3px);
+}
+
+.backpack-divider {
+  height: 3px;
+  background: c.$accent;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.backpack-description {
+  flex: 1;
+  background: c.$white;
+  color: c.$text-dark;
+  font-size: 1.1rem;
+  padding: 24px;
+  margin: 16px;
+  border-radius: 16px;
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+}

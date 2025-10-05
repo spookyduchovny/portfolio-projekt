@@ -1,0 +1,124 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.kontakt-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  margin: 48px auto;
+  max-width: 80%;
+}
+
+.kontakt-info {
+  background: c.$white;
+  border: 2px solid c.$blue-light;
+  border-radius: 12px;
+  padding: 48px 36px;       
+  width: 40%;       
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.15em;  
+}
+
+.kontakt-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  border: 2px solid c.$blue-light;
+}
+
+.kontakt-info h2 { 
+  font-family: f.$retro-font;
+  font-size: 1.3em;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.kontakt-info p {
+  font-family: f.$base-font;
+  font-size: 1em;
+  color: c.$text-dark;
+  text-align: left;
+}
+
+.kontakt-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; 
+  margin: 18px 0 18px 0;
+}
+
+.kontakt-socials a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: c.$text-dark;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.kontakt-socials i {
+  font-size: 1.5em;
+  width: 2em;
+  text-align: center;
+}
+
+/* Formularen */
+.kontakt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;            
+  width: 40%;           
+  max-width: 100%;
+  padding: 48px 36px;    
+  font-size: 1.6em;      
+}
+
+.kontakt-form label {
+  font-family: f.$base-font;
+  font-size: 1.1em;
+  color: c.$text-dark;
+  margin-bottom: 6px; /* lidt afstand til input */
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+  font-family: f.$base-font;
+  font-size: 1.1em;
+  border: 2px solid c.$blue-light;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: c.$gray-light;
+  color: c.$text-dark;
+  outline: none;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kontakt-form textarea {
+  min-height: 140px;
+}
+
+.kontakt-form button {
+  font-family: f.$base-font;
+  font-size: 1.1em;
+  background: c.$white;
+  border: 2px solid c.$blue-light;
+  color: c.$text-dark;
+  border-radius: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.kontakt-form button:hover {
+  background: c.$blue;
+  color: c.$white;
+}

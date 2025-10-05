@@ -1,0 +1,104 @@
+@use '../layout/typography' as f;
+@use '../layout/colors' as c;
+
+.home-link {
+  display: inline-block;  
+  position: absolute;      
+  top: 10px;
+  left: 10px;
+  z-index: 1000;    
+}
+
+.home-icon {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.bottom-header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background: c.$gray-border;
+  border-top: 2px solid c.$gray-border;
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  width: 100%;
+  position: relative;
+  background: c.$gray-light 80%;
+  border-bottom: 1px solid c.$gray-border;
+}
+
+.menu-btn {
+  background: c.$gray-darker;
+  color: c.$text-dark;
+  border: 2px outset c.$gray-border;
+  padding: 0 18px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px 6px 0 0;
+  width: 140px;
+  text-align: left;
+  margin-left: 8px;
+  font-family: f.$base-font;
+  font-weight: bold;
+  transition: background 0.2s, border 0.2s;
+}
+
+.menu-btn:active {
+  background: c.$gray-border;
+  border: 2px inset c.$gray-border;
+}
+
+.bottom-nav {
+  position: absolute;
+  left: 0;
+  bottom: 44px;
+  width: 140px;
+  background: c.$gray-light;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  transition: max-height 0.3s, padding 0.3s;
+  overflow: hidden;
+  max-height: 0;
+  border: 2px outset #b0b0b0;
+  border-radius: 8px 8px 0 0;
+}
+
+.bottom-header.open .bottom-nav {
+  max-height: 160px;
+  padding: 16px 0 16px 0;
+}
+
+.bottom-nav a {
+  color: c.$text-dark;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 6px 18px;
+  transition: color 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: f.$base-font;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-nav img {
+  max-width: 20px;
+}
+
+.bottom-nav a:hover {
+  color: c.$white;
+  background: c.$blue;
+}

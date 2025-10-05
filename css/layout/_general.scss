@@ -1,0 +1,28 @@
+@use 'typography' as f;
+@use 'colors' as c;
+
+//Generel styling
+body{
+  background: c.$background-color;
+  font-family: f.$base-font;
+  padding-top: 10px;
+  font-size: f.$font-size-base;
+}
+
+h2, h3{
+  font-family: f.$heading-font;
+  color: c.$text-dark;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+//Dem der ikke skal vises i desktop
+.mobile-taskbar {
+  display: none;
+}
+.portfolio-apps {
+  display: none;
+}
