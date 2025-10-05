@@ -1,17 +1,21 @@
-export function initScrollTopButton(button) {
-  if (!button) return;
+export function initScrollTopButton(btn) {
+  if (!btn) return;
 
   // Scroll til toppen ved klik
-  button.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Vis/skjul knappen ved scroll
+  // Scroll event: vis knap kun hvis man scroller
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      button.style.display = "block";
+    if (window.scrollY > 200) {  // ved 200px
+      btn.classList.add("show");
     } else {
-      button.style.display = "none";
+      btn.classList.remove("show");
     }
   });
+    // Sørg for, at den starter skjult på desktop
+  if (window.innerWidth > 900) {
+    btn.style.display = "none";
+  }
 }

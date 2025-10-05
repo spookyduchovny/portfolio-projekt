@@ -3,55 +3,54 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
+      <title>Portfolio</title>
       <link rel="stylesheet" href="css/style.css">
       <script type="module" src="src/main.js" defer></script>
       <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
   </head>
-  <body class="portfolio-page">
+  <body id="portfolio" class="portfolio-page">
     <main>
-  <div class="windows-folder">
-    <div class="folder-bar">
-      <span class="folder-title">Portfolio</span>
-      <a href="#" class="folder-close" id="back-btn">
-        <img src="img/green-arrow.png" alt="Luk vindue" class="folder-x">
-      </a>
-    </div>
-    <div class="folder-content">
-      <nav class="folder-icons">
-        <div class="folder-icon-item">
-          <a href="portfolio/tekst.html"><img src="img/bog.png" alt="closed book"></a>
-          <span class="folder-icon-text">Tekst</span>
-        </div>
-        <div class="folder-icon-item">
-          <a href="portfolio/webudvikling.html"><img src="img/pc.png" alt="pc off"></a>
-          <span class="folder-icon-text">Webudvikling</span>
-        </div>
-        <div class="folder-icon-item">
-          <a href="portfolio/video.html"><img src="img/filmklap.png" alt="movie off"></a>
-          <span class="folder-icon-text">Video</span>
-        </div>
-      </nav>
-    </div>
-  </div>
-<div class="portfolio-apps">
-  <a href="portfolio/tekst.html" class="app-icon">
-    <img src="img/bog.png" alt="Tekst">
-    <span>Tekst</span>
-  </a>
-  <a href="portfolio/webudvikling.html" class="app-icon">
-    <img src="img/pc.png" alt="Webudvikling">
-    <span>Webudvikling</span>
-  </a>
-  <a href="portfolio/video.html" class="app-icon">
-    <img src="img/filmklap.png" alt="Video">
-    <span>Video</span>
-  </a>
-</div>
-  <a href="#" class="folder-close-mobile" id="back-btn">
-    <img src="../../img/green-arrow.png" alt="Luk vindue" class="folder-x">
-  </a>
-</main>
 
+      <section class="windows-folder" aria-labelledby="folder-title">
+        <div class="folder-bar">
+          <h2 id="folder-title" class="folder-title">Portfolio</h2>
+          <a href="#" class="folder-back" id="back-btn" aria-label="Luk vindue">
+            <img src="img/green-arrow.png" alt="" class="folder-arrow" aria-hidden="true">
+          </a>
+        </div>
+        <div class="folder-content">
+          <nav class="folder-icons" aria-label="Portfolio sektioner">
+            <a href="portfolio/tekst.html" class="folder-icon-item">
+              <img src="img/bog.png" alt="Portfolio - Tekst" class="folder-icon-img">
+              <span class="folder-icon-text">Tekst</span>
+            </a>
+            <a href="portfolio/webudvikling.html" class="folder-icon-item">
+              <img src="img/pc.png" alt="Portfolio - Webudvikling" class="folder-icon-img">
+              <span class="folder-icon-text">Webudvikling</span>
+            </a>
+            <a href="portfolio/video.html" class="folder-icon-item">
+              <img src="img/filmklap.png" alt="Portfolio - Video" class="folder-icon-img">
+              <span class="folder-icon-text">Video</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="portfolio-apps" aria-label="Portfolio apps">
+        <a href="portfolio/tekst.html" class="app-icon">
+          <img src="img/bog.png" alt="Portfolio Tekst">
+          <span>Tekst</span>
+        </a>
+        <a href="portfolio/webudvikling.html" class="app-icon">
+          <img src="img/pc.png" alt="Portfolio Webudvikling">
+          <span>Webudvikling</span>
+        </a>
+        <a href="portfolio/video.html" class="app-icon">
+          <img src="img/filmklap.png" alt="Portfolio Video">
+          <span>Video</span>
+        </a>
+      </section>
+
+    </main>
   </body>
 </html>

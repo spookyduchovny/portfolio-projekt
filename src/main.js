@@ -1,26 +1,39 @@
-// src/main.js
 "use strict";
 
 import { renderSkipLink } from "./ui-components/skipLink.js";
-import { initHomePage } from "./pages/homePage.js";
-import { Header } from "./models/Header.js";
 import { renderScrollTopButton } from "./ui-components/scrollTopButton.js";
 import { initScrollTopButton } from "./interactivity/scrollTopInteractivity.js";
+import { initPortfolioPage } from "./pages/portfolioPage.js";
+import { initCvPage } from "./pages/cvPage.js";
+import { Header } from "./models/Header.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("DOM klar - main.js kører");
 
-  // 1) render skip-link tidligt (så keyboard-brugere kan hoppe direkte til indhold)
-  renderSkipLink(document.body);
-
-  // 2) header
   const header = new Header();
   header.render();
+  console.log("Header renderet");
 
-  // 3) scroll-to-top: render og init
+  renderSkipLink(document.body);
+  console.log("Skip-link renderet");
+
   renderScrollTopButton(document.body);
   const scrollBtn = document.querySelector('.scroll-top-btn');
   initScrollTopButton(scrollBtn);
+  console.log("ScrollTopButton initialiseret");
 
-  // 4) init restante side-specifikke greb
-  initHomePage();
+  const bodyId = document.body.id;
+  console.log("Body id:", bodyId);
+
+  if (bodyId === "portfolio") {
+    console.log("Initialiserer portfolioPage");
+    initPortfolioPage();
+  } else if (bodyId === "cv") {
+    console.log("Initialiserer cvPage");
+    initCvPage();
+  } else {
+    console.log("Ingen side-specifik initialisering for denne side");
+  }
+
+  console.log("main.js færdig");
 });

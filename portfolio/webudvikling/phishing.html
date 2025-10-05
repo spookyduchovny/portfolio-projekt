@@ -3,37 +3,62 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script src="js/script.js" defer></script>
+      <title>Phishing Projekt</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script type="module" src="../../src/main.js" defer></script>
       <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-  <header class="nav-header">
-    <a href="index.html">
-      <img src="img/home-icon.png" alt="Home" class="home-icon">
-    </a>
-  </header>
-    <header class="bottom-header">
-  <div class="bottom-bar">
-    <button class="menu-btn">Menu</button>
-    <nav class="bottom-nav">
-      <a href="index.html"><img src="img/home-icon.png" alt="hjem">Hjem</a>
-      <a href="cv.html"><img src="img/cv.png" alt="cv">CV</a>
-      <a href="portfolio.html"></i><img src="img/folder.png" alt="portfolio">Portfolio</a>
-      <a href="kontakt.html"><img src="img/contact.png" alt="kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>    
+  <body id="portfolio">
 <main>
 
-<div class="mobile-taskbar">
-  <a href="../../index.html"><img src="../../img/home-icon.png" alt="Hjem"><span>Hjem</span></a>
-  <a href="../../cv.html"><img src="../../img/cv.png" alt="CV"><span>CV</span></a>
-  <a href="../../portfolio.html"><img src="../../img/folder.png" alt="Portfolio"><span>Portfolio</span></a>
-  <a href="../../kontakt.html"><img src="../../img/contact.png" alt="Kontakt"><span>Kontakt</span></a>
-</div>
-</main>
+  <div class="project-topbar">
+    <img src="../../img/pc.png" alt="" class="project-icon" aria-hidden="true">
+    <h1 class="project-title">PROJEKTER</h1>
+    <a href="#" class="project-back" id="back-btn" aria-label="Gå tilbage">
+      <img src="../../img/green-arrow.png" alt="" class="back-arrow" aria-hidden="true">
+    </a>
+  </div>
 
+  <section class="project-content">
+    <article class="project-left">
+      <div class="project-img">
+        <img src="../../img/phishing-logo.png" alt="Phishing-logo">
+      </div>
+      <div class="project-info">
+        <ul class="project-meta">
+          <li><b>Titel:</b> Phishing Quiz</li>
+          <li><b>Dato:</b> 2025</li>
+          <li><b>Rolle:</b> Udvikler, Designer</li>
+        </ul>      
+      </div>
+    </article>
+
+    <article class="project-right">
+      <section class="project-section" aria-labelledby="beskrivelse-title">
+        <h2 id="beskrivelse-title" class="project-section-title">Beskrivelse</h2>
+        <p>
+          Jeg har udviklet en interaktiv quiz om phishing, med fokus på at oplyse brugere om denne udbredte form for cyberangreb. Hjemmesiden giver scenarier, hvor brugeren kan vælge, hvordan de ville reagere på mistænkelige mails, samtidig med at de får mulighed for at lære om forskellige typer phishing-angreb og bedste praksis.
+        </p>
+      </section>
+
+      <section class="project-section" aria-labelledby="proces-title">
+        <h2 id="proces-title" class="project-section-title">Proces</h2>
+        <p>
+          Projektet er kodet i HTML, CSS og JavaScript. Quizzen giver brugeren flere chancer for at træffe det rigtige valg, ligesom i et realistisk scenario. Designet er inspireret af en computer-terminal for at skabe en “hacker” vibe, som understøtter læring og engagement. Fokus har været på brugervenlighed, interaktivitet og visuel konsistens.
+        </p>
+      </section>
+
+      <section class="project-section" aria-labelledby="resultat-title">
+        <h2 id="resultat-title" class="project-section-title">Resultat</h2>
+        <p>
+          Quizzen har hjulpet brugere med at forstå og identificere phishing-angreb bedre. Den kombinerer læring og interaktivitet, hvilket øger både engagement og viden om cybersikkerhed. Projektet har styrket mine færdigheder inden for webudvikling, webtilgængelighed, interaktiv design og informationsformidling.
+        </p>
+      </section>
+
+      <a href="https://jeppebj.dk/phishing-test/" class="project-btn">Tag mig til projektet</a>
+    </article>
+  </section>
+
+</main>
   </body>
 </html>

@@ -1,9 +1,6 @@
 "use strict";
 
-/**
- * Initialize buttons that should go back in history.
- */
-export function initBackButtons(selector = '.folder-close, .folder-close-mobile, #back-btn, #back-btn-mobile') {
+export function initBackButtons(selector = '.folder-back,  #back-btn') {
   const buttons = document.querySelectorAll(selector);
   if (!buttons || buttons.length === 0) return;
 

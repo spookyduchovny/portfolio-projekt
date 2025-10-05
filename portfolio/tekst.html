@@ -3,39 +3,39 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
+      <title>Tekst</title>
       <link rel="stylesheet" href="../../css/style.css">
       <script type="module" src="../../src/main.js" defer></script>
       <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body id="portfolio">
     <main>
-    <div class="windows-folder">
-    <div class="folder-bar">
-      <span class="folder-title">Video</span>
-      <a href="#" class="folder-close" id="back-btn">
-        <img src="../../img/green-arrow.png" alt="green back arrow" class="folder-x">
-      </a>
-    </div>
-    <div class="folder-content">
-      <nav class="folder-icons">
-        <div class="folder-icon-item">
-          <a href="../portfolio/tekst/wedio.html"><img src="../../img/wedio-logo.png" alt="Wedio logo"></a>
-          <span class="folder-icon-text">Blog-content hos Wedio</span>
-        </div>
-      </nav>
-    </div>
-  </div>
-    <div class="portfolio-apps">
-  <a href="../portfolio/tekst/wedio.html" class="app-icon">
-    <img src="../img/wedio-logo.png" alt="Phishing Test">
-    <span>Blog-content hos Wedio</span>
-  </a>
-</div>
-  <a href="#" class="folder-close-mobile" id="back-btn">
-    <img src="../../img/green-arrow.png" alt="green back arrow" class="folder-x">
-  </a>
-</main>
 
+      <section class="windows-folder" aria-labelledby="folder-title">
+        <div class="folder-bar">
+          <h2 id="folder-title" class="folder-title">Tekst</h2>
+          <a href="#" class="folder-back" id="back-btn" aria-label="Tilbage">
+            <img src="../../img/green-arrow.png" alt="" class="folder-arrow" aria-hidden="true">
+          </a>
+        </div>
+
+        <div class="folder-content">
+          <nav class="folder-icons" aria-label="Portfolio Tekst projekter">
+            <a href="../portfolio/tekst/wedio.html" class="folder-icon-item">
+              <img src="../../img/wedio-logo.png" alt="Wedio logo" class="folder-icon-img">
+              <span class="folder-icon-text">Blog-content hos Wedio</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="portfolio-apps" aria-label="Portfolio Tekst apps">
+        <a href="../portfolio/tekst/wedio.html" class="app-icon">
+          <img src="../img/wedio-logo.png" alt="Wedio logo">
+          <span>Blog-content hos Wedio</span>
+        </a>
+      </section>
+
+    </main>
   </body>
 </html>

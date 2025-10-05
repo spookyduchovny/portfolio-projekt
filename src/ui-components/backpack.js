@@ -1,44 +1,35 @@
 "use strict";
 
 /**
- * Render the backpack structure into a container.
+ * Render the backpack structure using template literals, accessible for keyboard and screen readers.
  */
 export function renderBackpack(containerSelector = '#backpack', tools = {}) {
   const container = document.querySelector(containerSelector);
   if (!container) return null;
 
-  const iconsWrapper = document.createElement('div');
-  iconsWrapper.classList.add('backpack-icons');
+  // Lav HTML-strukturen som template string med tabindex og aria-label
+  const iconsHTML = Object.entries(tools).map(([key, tool]) => `
+    <div class="icon" data-tool="${key}" tabindex="0" role="button" aria-label="${tool.label}" aria-describedby="backpack-description">
+      <img src="${tool.img}" alt="${tool.label}">
+      <span>${tool.label}</span>
+    </div>
+  `).join('');
 
-  Object.entries(tools).forEach(([key, tool]) => {
-    const iconDiv = document.createElement('div');
-    iconDiv.classList.add('icon');
-    iconDiv.setAttribute('data-tool', key);
+  const template = `
+    <div class="backpack-icons">
+      ${iconsHTML}
+    </div>
+    <div class="backpack-divider"></div>
+    <div class="backpack-description" id="backpack-description" aria-live="polite">
+      Vælg et ikon for at se beskrivelse.
+    </div>
+  `;
 
-    const img = document.createElement('img');
-    img.src = tool.img;
-    img.alt = tool.label;
+  container.innerHTML = template;
 
-    const span = document.createElement('span');
-    span.textContent = tool.label;
+  const iconsWrapper = container.querySelector('.backpack-icons');
+  const descBox = container.querySelector('#backpack-description');
 
-    iconDiv.appendChild(img);
-    iconDiv.appendChild(span);
-    iconsWrapper.appendChild(iconDiv);
-  });
-
-  const divider = document.createElement('div');
-  divider.classList.add('backpack-divider');
-
-  const descBox = document.createElement('div');
-  descBox.classList.add('backpack-description');
-  descBox.id = 'backpack-description';
-  descBox.textContent = 'Vælg et ikon for at se beskrivelse.';
-
-  container.innerHTML = '';
-  container.appendChild(iconsWrapper);
-  container.appendChild(divider);
-  container.appendChild(descBox);
-
+  // Returnér references til de vigtige elementer
   return { iconsWrapper, descBox };
 }

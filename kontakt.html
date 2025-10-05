@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html lang="da">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script type="module" src="src/main.js" defer></script>
-      <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
-  </head>
-  <body>   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="src/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
+</head>
+<body>   
 <main>
   <div class="kontakt-container">
+
     <div class="kontakt-info">
-      <img src="img/profile.png" alt="profile picture" class="kontakt-img">
+      <img src="img/profile.png" alt="Profilbillede af Jeppe Brosbøl Jørgensen" class="kontakt-img">
       <h2>Jeppe Brosbøl Jørgensen</h2>
-<p>
-  Engageret og resultatorienteret kommunikations- og marketingprofil med speciale i content marketing og strategisk kommunikation.<br><br>
-  Jeg trives i krydsfeltet mellem kreativitet og struktur og har dokumenteret erfaring med tekstforfatning, branding, SoMe og digitale kampagner.<br><br>
-  Sager om alle, hvor jeg kan styrke virksomheders synlighed og bidrage med skarpe, målrettede budskaber.
-</p>
-<div class="kontakt-socials">
-  <a href="https://www.linkedin.com/in/jeppebj/" target="_blank" rel="noopener" title="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i> LinkedIn
-  </a>
-  <a href="https://www.youtube.com/@jeppejeppe" target="_blank" rel="noopener" title="YouTube">
-    <i class="fa-brands fa-youtube"></i> YouTube
-  </a>
-  <a href="https://www.tiktok.com/@jeppeyt" target="_blank" rel="noopener" title="TikTok">
-    <i class="fa-brands fa-tiktok"></i> TikTok
-  </a>
-  <a href="mailto:jeppebj@yahoo.com" title="E-mail">
-    <i class="fa-solid fa-envelope"></i> Mail
-  </a>
-</div>
+      <p>
+        Engageret og resultatorienteret kommunikations- og marketingprofil med speciale i content marketing og strategisk kommunikation.<br><br>
+        Jeg trives i krydsfeltet mellem kreativitet og struktur og har dokumenteret erfaring med tekstforfatning, branding, SoMe og digitale kampagner.<br><br>
+        Sager om alle, hvor jeg kan styrke virksomheders synlighed og bidrage med skarpe, målrettede budskaber.
+      </p>
+
+      <div class="kontakt-socials">
+        <a href="https://www.linkedin.com/in/jeppebj/" target="_blank" rel="noopener" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://www.youtube.com/@jeppejeppe" target="_blank" rel="noopener" title="YouTube">
+          <i class="fa-brands fa-youtube"></i> YouTube
+        </a>
+        <a href="https://www.tiktok.com/@jeppeyt" target="_blank" rel="noopener" title="TikTok">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+        <a href="mailto:jeppebj@yahoo.com" title="Send e-mail">
+          <i class="fa-solid fa-envelope"></i> Mail
+        </a>
+      </div>
     </div>
+
     <form class="kontakt-form" action="mailto:jeppebj@yahoo.com" method="POST" enctype="text/plain">
-      <input type="text" name="Navn" placeholder="Navn" required>
-      <input type="email" name="Email" placeholder="E-mail" required>
-      <textarea name="Besked" placeholder="Besked" rows="5" required></textarea>
+      <label for="navn">Navn</label>
+      <input type="text" id="navn" name="Navn" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="Email" required>
+
+      <label for="besked">Besked</label>
+      <textarea id="besked" name="Besked" rows="5" required></textarea>
+
       <button type="submit">Send</button>
     </form>
+
   </div>
 </main>
-
-  </body>
+</body>
 </html>

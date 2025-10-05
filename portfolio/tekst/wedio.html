@@ -3,37 +3,62 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script src="js/script.js" defer></script>
+      <title>Wedio projekt</title>
+      <link rel="stylesheet" href="../../css/style.css">
+      <script type="module" src="../../src/main.js" defer></script>
       <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
   </head>
-  <body>
-  <header class="nav-header">
-    <a href="index.html">
-      <img src="img/home-icon.png" alt="Home" class="home-icon">
-    </a>
-  </header>
-    <header class="bottom-header">
-  <div class="bottom-bar">
-    <button class="menu-btn">Menu</button>
-    <nav class="bottom-nav">
-      <a href="index.html"><img src="img/home-icon.png" alt="hjem">Hjem</a>
-      <a href="cv.html"><img src="img/cv.png" alt="cv">CV</a>
-      <a href="portfolio.html"></i><img src="img/folder.png" alt="portfolio">Portfolio</a>
-      <a href="kontakt.html"><img src="img/contact.png" alt="kontakt">Kontakt</a>
-    </nav>
-  </div>
-</header>    
+  <body id="portfolio">
 <main>
 
-<div class="mobile-taskbar">
-  <a href="../../index.html"><img src="../../img/home-icon.png" alt="Hjem"><span>Hjem</span></a>
-  <a href="../../cv.html"><img src="../../img/cv.png" alt="CV"><span>CV</span></a>
-  <a href="../../portfolio.html"><img src="../../img/folder.png" alt="Portfolio"><span>Portfolio</span></a>
-  <a href="../../kontakt.html"><img src="../../img/contact.png" alt="Kontakt"><span>Kontakt</span></a>
-</div>
-</main>
+  <div class="project-topbar">
+    <img src="../../img/bog.png" alt="" class="project-icon" aria-hidden="true">
+    <h1 class="project-title">PROJEKTER</h1>
+    <a href="#" class="project-back" id="back-btn" aria-label="Gå tilbage">
+      <img src="../../img/green-arrow.png" alt="" class="back-arrow" aria-hidden="true">
+    </a>
+  </div>
 
+  <section class="project-content">
+    <article class="project-left">
+      <div class="project-img">
+        <img src="../../img/wedio-logo.png" alt="Wedio-logo">
+      </div>
+      <div class="project-info">
+        <ul class="project-meta">
+          <li><b>Titel:</b> Wedio Blog</li>
+          <li><b>Dato:</b> 2021-2022</li>
+          <li><b>Rolle:</b> Skribent, SEO-specialist</li>
+        </ul>      
+      </div>
+    </article>
+
+    <article class="project-right">
+      <section class="project-section" aria-labelledby="beskrivelse-title">
+        <h2 id="beskrivelse-title" class="project-section-title">Beskrivelse</h2>
+        <p>
+          Jeg har arbejdet for virksomheden Wedio, hvor jeg har skrevet over 180 blogindlæg om foto og video. Formålet har været at skabe engagerende indhold og tiltrække organisk trafik, samt styrke virksomhedens position inden for medieproduktion og udlejning af filmudstyr.
+        </p>
+      </section>
+
+      <section class="project-section" aria-labelledby="proces-title">
+        <h2 id="proces-title" class="project-section-title">Proces</h2>
+        <p>
+          Mit arbejde inkluderede research, planlægning og produktion af SEO-optimerede blogindlæg, med fokus på relevante søgeord, læserinteresse og delbart indhold. Jeg samarbejdede med marketingteamet for at sikre, at artiklerne understøttede Wedios branding og digitale synlighed.
+        </p>
+      </section>
+
+      <section class="project-section" aria-labelledby="resultat-title">
+        <h2 id="resultat-title" class="project-section-title">Resultat</h2>
+        <p>
+          Bloggen har genereret betydelig organisk trafik og øget engagement på hjemmesiden, hvilket har bidraget til flere henvendelser og øget kendskab til Wedio. Erfaringen har styrket mine kompetencer inden for content marketing, SEO og digital formidling.
+        </p>
+      </section>
+
+      <a href="https://www.wedio.com/dk/author/jeppe" class="project-btn">Tag mig til projektet</a>
+    </article>
+  </section>
+
+</main>
   </body>
 </html>

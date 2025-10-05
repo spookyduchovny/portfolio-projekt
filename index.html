@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="da">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
-      <link rel="stylesheet" href="css/style.css">
-      <script type="module" src="src/main.js" defer></script>
-      <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeppe's Hjemmeside</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="src/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
   </head>
-  <body> 
-    <main>
-<div class="container-main">
-  <div class="container-intro">
-    <h2>Hej!</h2>
-    <h3>
-      Jeg hedder Jeppe og jeg er: <br>
-      Frontend-udvikler <br>
-      Content Marketer <br>
-      UX-Designer
-    </h3>
-    </div>
-  <div class="img-container">
-  <img class="img-man" src="img/man.png" alt="pixelated man">
-  </div>
-<div class="forside-ikoner">
-      <div class="ikon-item">
-        <a href="cv.html"><img src="img/cv.png" alt="book"></a>
-        <span class="ikon-text">CV</span>
-      </div>
-      <div class="ikon-item">
-        <a href="portfolio.html"><img src="img/folder.png" alt="folder"></a>
-        <span class="ikon-text">Portfolio</span>
-      </div>
-      <div class="ikon-item">
-        <a href="kontakt.html"><img src="img/contact.png" alt="letter"></a>
-        <span class="ikon-text">Contact</span>
-      </div>
-    </div>
-  </div>
-    </main>
+  <body>
+    <a href="#main-content" class="skip-link">Gå til hovedindhold</a>
+    
+    <main id="main-content">
+      <section class="container-main" aria-labelledby="intro-heading">
+        <div class="container-intro">
+          <h2 id="intro-heading">Hej!</h2>
+          <h3>
+            Jeg hedder Jeppe og jeg er: <br>
+            Frontend-udvikler <br>
+            Content Marketer <br>
+            UX-Designer
+          </h3>
+        </div>
 
+        <div class="img-container">
+          <img class="img-man" src="img/man.png" alt="Pixelart af Jeppe, stående med armene ned langs siden, med en bærbar i hånden">
+        </div>
+
+        <nav class="forside-ikoner" aria-label="Hurtige links til CV, Portfolio og Kontakt">
+          <div class="ikon-item">
+            <a href="cv.html" aria-label="Klik her for at åbne CV-siden">
+              <img src="img/cv.png" alt="Ikon af en bog">
+            </a>
+            <span class="ikon-text">CV</span>
+          </div>
+
+          <div class="ikon-item">
+            <a href="portfolio.html" aria-label="Klik her for at åbne Portfolio-siden">
+              <img src="img/folder.png" alt="Ikon af en mappe">
+            </a>
+            <span class="ikon-text">Portfolio</span>
+          </div>
+
+          <div class="ikon-item">
+            <a href="kontakt.html" aria-label="Klik her for at åbne Kontakt-siden">
+              <img src="img/contact.png" alt="Ikon af et brev">
+            </a>
+            <span class="ikon-text">Kontakt</span>
+          </div>
+        </nav>
+      </section>
+    </main>
   </body>
 </html>

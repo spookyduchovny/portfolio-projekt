@@ -3,108 +3,114 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Jeppe's Portfolio</title>
+      <title>CV</title>
       <link rel="stylesheet" href="css/style.css">
       <script type="module" src="src/main.js" defer></script>      
       <script src="https://kit.fontawesome.com/e72ad26c23.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body id="cv">
 <main>
   <div class="cv-container">
-    <div class="cv-left">
+    
+    <section class="cv-left" aria-labelledby="cv-left-title">
       <div class="cv-profile">
-        <img src="img/profile.png" alt="Profilbillede" class="cv-img">
-        <span class="cv-name">Jeppe Brosbøl Jørgensen</span>
+        <img src="img/profile.png" alt="Profilbillede af Jeppe Brosbøl Jørgensen" class="cv-img">
+        <h2 id="cv-left-title" class="cv-name">Jeppe Brosbøl Jørgensen</h2>
       </div>
-        <h2>Om mig</h2>
-        <p>
-          Jeg er en passioneret formidler og content creator med erfaring inden for digital marketing, video essays og kreativ kommunikation. 
-          Jeg elsker at kombinere analyserende tænkning med kreativitet – at skabe noget helt nyt, men også at forfine og optimere det eksisterende. 
-          <br><br>
-          Når jeg ikke arbejder, finder jeg ofte hvile i gaming, film og serier. Det er også her jeg drager meget af min inspiration fra. Jeg kan også lide at dyrke sport, her er det primært cykling som jeg nyder mest.
-        </p>
+      <h3>Om mig</h3>
+      <p>
+        Jeg er en passioneret formidler og content creator med erfaring inden for digital marketing, video essays og kreativ kommunikation. 
+        Jeg elsker at kombinere analyserende tænkning med kreativitet – at skabe noget helt nyt, men også at forfine og optimere det eksisterende. 
+        <br><br>
+        Når jeg ikke arbejder, finder jeg ofte hvile i gaming, film og serier. Det er også her jeg drager meget af min inspiration fra. Jeg kan også lide at dyrke sport, her er det primært cykling som jeg nyder mest.
+      </p>
 
-<ul class="interests">
-  <li><i class="fas fa-bicycle"></i> Følger den professionelle cykelscene og kører selv mountainbike i min fritid (dog ikke på højt niveau)</li>
-  <li><i class="fas fa-film"></i> Mine yndlingsfilm tæller blandt andet: Apocalypse Now, Interstellar og The Social Network</li>
-  <li><i class="fas fa-tv"></i> Mine yndlingsserier tæller blandt andet: Mr. Robot, Band of Brothers og True Detective</li>
-  <li><i class="fas fa-futbol"></i> Manchester United-fan (hvis det ikke beviser min loyalitet, så ved jeg ikke hvad)</li>
-  <li><i class="fas fa-gamepad"></i> Spiller både singleplayer og multiplayer spil i alle genre. Bruger det til at slappe af, blive inspireret og holde mig connected med mine venner.</li>
-</ul>
-</div>
-    <div class="cv-right">
-      <div class="cv-tabs">
-        <button class="cv-tab active" data-tab="faerdigheder">Færdigheder</button>
-        <button class="cv-tab" data-tab="erfaring">Erfaring</button>
-        <button class="cv-tab" data-tab="backpack">Backpack</button>
+      <ul class="interests">
+        <li><i class="fas fa-bicycle" aria-hidden="true"></i> Følger den professionelle cykelscene og kører selv mountainbike i min fritid (dog ikke på højt niveau)</li>
+        <li><i class="fas fa-film" aria-hidden="true"></i> Mine yndlingsfilm tæller blandt andet: Apocalypse Now, Interstellar og The Social Network</li>
+        <li><i class="fas fa-tv" aria-hidden="true"></i> Mine yndlingsserier tæller blandt andet: Mr. Robot, Band of Brothers og True Detective</li>
+        <li><i class="fas fa-futbol" aria-hidden="true"></i> Manchester United-fan (hvis det ikke beviser min loyalitet, så ved jeg ikke hvad)</li>
+        <li><i class="fas fa-gamepad" aria-hidden="true"></i> Spiller både singleplayer og multiplayer spil i alle genre. Bruger det til at slappe af, blive inspireret og holde mig connected med mine venner.</li>
+      </ul>
+    </section>
+
+    <section class="cv-right" aria-labelledby="cv-right-title">
+      <div class="cv-tabs" role="tablist" aria-label="CV sektioner">
+        <button class="cv-tab active" data-tab="faerdigheder" role="tab" aria-selected="true" aria-controls="faerdigheder">Færdigheder</button>
+        <button class="cv-tab" data-tab="erfaring" role="tab" aria-selected="false" aria-controls="erfaring">Erfaring</button>
+        <button class="cv-tab" data-tab="backpack" role="tab" aria-selected="false" aria-controls="backpack">Backpack</button>
       </div>
-      <div class="cv-tab-content" id="faerdigheder">
-  <h3>Soft skills:</h3>
-  <div class="skills-section">
-    <p><i class="fas fa-users"></i> <b>Samarbejde & relationer:</b> Empatisk, hensynsfuld, god til at skabe harmoni.</p>
-    <p><i class="fas fa-comment-dots"></i> <b>Kommunikation:</b> Kan forklare ting forståeligt, god til både skriftlig og verbal formidling.</p>
-    <p><i class="fas fa-tasks"></i> <b>Arbejdsstil:</b> Vedholdende, disciplineret, struktureret når nødvendigt.</p>
-    <p><i class="fas fa-lightbulb"></i> <b>Innovation & udvikling:</b> Nytænkende, idérig, ser muligheder.</p>
-    <p><i class="fas fa-user-cog"></i> <b>Selvledelse:</b> Ansvarlig, stabil, reflekterende.</p>
-    <p><i class="fas fa-bolt"></i> <b>Motivation:</b> Drives af kreativ frihed, teamwork.</p>
-  </div>
 
-  <h3>Hard skills:</h3>
-  <div class="skills-section">
-    <p><i class="fas fa-pencil-alt"></i> <b>Content Marketing:</b> Produktion af +180 artikler, blogindhold, whitepaper.</p>
-    <p><i class="fas fa-search"></i> <b>SEO & SEM:</b> Søgeordsstrategi, organisk optimering, Google Analytics.</p>
-    <p><i class="fas fa-share-alt"></i> <b>Social Media Marketing:</b> Planlægning og eksekvering af indhold på SoMe.</p>
-    <p><i class="fas fa-chart-line"></i> <b>Research & Strategi:</b> Markedsresearch, strategiudvikling, kampagneplanlægning.</p>
-    <p><i class="fas fa-file-alt"></i> <b>Tekstproduktion:</b> Artikler, blogindlæg, pitch-materiale.</p>
-    <p><i class="fas fa-image"></i> <b>Grafisk indhold:</b> Deltagelse i kampagne- og reklameproduktion, visuelt indhold.</p>
-    <p><i class="fas fa-video"></i> <b>Video & Foto:</b> Runner på filmproduktioner, klipning/redigering i Premiere.</p>
-  </div>
-</div>
-      <div class="cv-tab-content" id="erfaring" style="display:none;">
-  <h3>Uddannelse</h3>
-  <p><i class="fas fa-graduation-cap"></i> <b>2020 – 2022:</b> <br> Cand.merc. i Strategic Communication, Aarhus BSS</p>
-  <p><i class="fas fa-graduation-cap"></i> <b>2017 – 2020:</b> <br> Bachelor of Arts in Marketing and Management Communication, Aarhus BSS</p>
+      <div class="cv-tab-content" id="faerdigheder" role="tabpanel" aria-labelledby="cv-right-title">
+        <h3 id="cv-right-title">Soft skills:</h3>
+        <div class="skills-section">
+          <p><i class="fas fa-users" aria-hidden="true"></i> <b>Samarbejde & relationer:</b> Empatisk, hensynsfuld, god til at skabe harmoni.</p>
+          <p><i class="fas fa-comment-dots" aria-hidden="true"></i> <b>Kommunikation:</b> Kan forklare ting forståeligt, god til både skriftlig og verbal formidling.</p>
+          <p><i class="fas fa-tasks" aria-hidden="true"></i> <b>Arbejdsstil:</b> Vedholdende, disciplineret, struktureret når nødvendigt.</p>
+          <p><i class="fas fa-lightbulb" aria-hidden="true"></i> <b>Innovation & udvikling:</b> Nytænkende, idérig, ser muligheder.</p>
+          <p><i class="fas fa-user-cog" aria-hidden="true"></i> <b>Selvledelse:</b> Ansvarlig, stabil, reflekterende.</p>
+          <p><i class="fas fa-bolt" aria-hidden="true"></i> <b>Motivation:</b> Drives af kreativ frihed, teamwork.</p>
+        </div>
 
-  <h3>Kurser</h3>
-  <p><i class="fas fa-chalkboard-teacher"></i> <b>2023:</b> <br> Digital Koordinator - Digital Marketing</p>
-  <p><i class="fas fa-chalkboard-teacher"></i> <b>2023:</b> <br> Erhverv, Personlig ledelse og idræt</p>
-  <p><i class="fas fa-chalkboard-teacher"></i> <b>2021:</b> <br> Grafisk Design og UX</p>
-
-  <h3>Arbejdserfaring</h3>
-  <p><i class="fas fa-briefcase"></i> <b>Februar 2024 – Marts 2024:</b> <br> Marketing Intern hos Grobowski</p>
-  <ul>
-    <li>Research og tekstproduktion af Whitepaper (ESG)</li>
-    <li>Udarbejdelse af cases og pitches</li>
-    <li>Tone of Voice udvikling</li>
-  </ul>
-
-  <p><i class="fas fa-briefcase"></i> <b>Maj 2023 – Juni 2023:</b> <br> Creative Intern hos Wisti & Jern</p>
-  <ul>
-    <li>Websiteudvikling</li>
-    <li>Strategiarbejde</li>
-    <li>Runner på videoproduktioner</li>
-    <li>Planlægning af reklamefilm</li>
-    <li>Grafiske opgaver i Photoshop</li>
-  </ul>
-
-  <p><i class="fas fa-briefcase"></i> <b>Januar 2022 – September 2022:</b> <br> Content Marketing Associate hos Wedio</p>
-  <ul>
-    <li>Skrev +180 artikler i Ghost CMS</li>
-    <li>Kvalitetssikring af freelanceindhold</li>
-    <li>SEO og indholdsoptimering</li>
-  </ul>
-
-  <p><i class="fas fa-briefcase"></i> <b>August 2021 – December 2021:</b> <br> Digital Marketing Intern hos Wedio</p>
-  <ul>
-    <li>Content produktion</li>
-    <li>SEO-arbejde</li>
-    <li>Artikler og blogindhold</li>
-  </ul>
-</div>
-      <div class="cv-tab-content" id="backpack" style="display:none;">
+        <h3>Hard skills:</h3>
+        <div class="skills-section">
+          <p><i class="fas fa-pencil-alt" aria-hidden="true"></i> <b>Content Marketing:</b> Produktion af +180 artikler, blogindhold, whitepaper.</p>
+          <p><i class="fas fa-search" aria-hidden="true"></i> <b>SEO & SEM:</b> Søgeordsstrategi, organisk optimering, Google Analytics.</p>
+          <p><i class="fas fa-share-alt" aria-hidden="true"></i> <b>Social Media Marketing:</b> Planlægning og eksekvering af indhold på SoMe.</p>
+          <p><i class="fas fa-chart-line" aria-hidden="true"></i> <b>Research & Strategi:</b> Markedsresearch, strategiudvikling, kampagneplanlægning.</p>
+          <p><i class="fas fa-file-alt" aria-hidden="true"></i> <b>Tekstproduktion:</b> Artikler, blogindlæg, pitch-materiale.</p>
+          <p><i class="fas fa-image" aria-hidden="true"></i> <b>Grafisk indhold:</b> Deltagelse i kampagne- og reklameproduktion, visuelt indhold.</p>
+          <p><i class="fas fa-video" aria-hidden="true"></i> <b>Video & Foto:</b> Runner på filmproduktioner, klipning/redigering i Premiere.</p>
+        </div>
       </div>
-    </div>
+
+      <div class="cv-tab-content" id="erfaring" role="tabpanel" style="display:none;">
+        <h3>Uddannelse</h3>
+        <p><i class="fas fa-graduation-cap" aria-hidden="true"></i> <b>2020 – 2022:</b> <br> Cand.merc. i Strategic Communication, Aarhus BSS</p>
+        <p><i class="fas fa-graduation-cap" aria-hidden="true"></i> <b>2017 – 2020:</b> <br> Bachelor of Arts in Marketing and Management Communication, Aarhus BSS</p>
+
+        <h3>Kurser</h3>
+        <p><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> <b>2023:</b> <br> Digital Koordinator - Digital Marketing</p>
+        <p><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> <b>2023:</b> <br> Erhverv, Personlig ledelse og idræt</p>
+        <p><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> <b>2021:</b> <br> Grafisk Design og UX</p>
+
+        <h3>Arbejdserfaring</h3>
+        <p><i class="fas fa-briefcase" aria-hidden="true"></i> <b>Februar 2024 – Marts 2024:</b> <br> Marketing Intern hos Grobowski</p>
+        <ul>
+          <li>Research og tekstproduktion af Whitepaper (ESG)</li>
+          <li>Udarbejdelse af cases og pitches</li>
+          <li>Tone of Voice udvikling</li>
+        </ul>
+
+        <p><i class="fas fa-briefcase" aria-hidden="true"></i> <b>Maj 2023 – Juni 2023:</b> <br> Creative Intern hos Wisti & Jern</p>
+        <ul>
+          <li>Websiteudvikling</li>
+          <li>Strategiarbejde</li>
+          <li>Runner på videoproduktioner</li>
+          <li>Planlægning af reklamefilm</li>
+          <li>Grafiske opgaver i Photoshop</li>
+        </ul>
+
+        <p><i class="fas fa-briefcase" aria-hidden="true"></i> <b>Januar 2022 – September 2022:</b> <br> Content Marketing Associate hos Wedio</p>
+        <ul>
+          <li>Skrev +180 artikler i Ghost CMS</li>
+          <li>Kvalitetssikring af freelanceindhold</li>
+          <li>SEO og indholdsoptimering</li>
+        </ul>
+
+        <p><i class="fas fa-briefcase" aria-hidden="true"></i> <b>August 2021 – December 2021:</b> <br> Digital Marketing Intern hos Wedio</p>
+        <ul>
+          <li>Content produktion</li>
+          <li>SEO-arbejde</li>
+          <li>Artikler og blogindhold</li>
+        </ul>
+      </div>
+
+      <div class="cv-tab-content" id="backpack" role="tabpanel" style="display:none;">
+      </div>
+    </section>
+
   </div>
 </main>
-  </body>
+</body>
 </html>

@@ -1,7 +1,7 @@
 "use strict";
 
 export const skipLinkTemplate = `
-  <a href="#main-content" class="skip-link">Spring til indhold</a>
+   <a href="#main-content" class="skip-link" tabindex="0">Spring til indhold</a>
 `;
 
 export function renderSkipLink(parent = document.body) {

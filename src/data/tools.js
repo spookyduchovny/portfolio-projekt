@@ -1,45 +1,44 @@
-
 "use strict";
 
-export const tools = {
-  chatgpt: {
+export const tools = [
+  {
     label: "ChatGPT",
     img: "img/chatgpt.png",
-    description: "ChatGPT: Lorem ipsum dolor sit amet, consectetur adipiscing elit. ChatGPT bruges til AI-baseret tekstgenerering."
+    description: "ChatGPT: Bruges i forbindelse med mit studie, hvor jeg har arbejdet med læring omkring prompting. Jeg har anvendt ChatGPT til webudvikling, prototyper, grafisk design og andre opgaver."
   },
-  davinci: {
+  {
     label: "DaVinci",
     img: "img/davinci.png",
-    description: "DaVinci: Lorem ipsum dolor sit amet, consectetur adipiscing elit. DaVinci bruges til avanceret videoredigering."
+    description: "DaVinci: Bruges til videoredigering på min YouTube-kanal, hvor jeg har redigeret videoer og optimeret indhold til platformen."
   },
-  javascript: {
+  {
     label: "JavaScript",
     img: "img/javascript.png",
-    description: "JavaScript: Lorem ipsum dolor sit amet, consectetur adipiscing elit. JavaScript bruges til webudvikling."
+    description: "JavaScript: Bruges i skoleprojekter og diverse personlige projekter, herunder mit phishing-projekt og webudviklingsopgaver."
   },
-  capcut: {
+  {
     label: "CapCut",
     img: "img/capcut.png",
-    description: "CapCut: Lorem ipsum dolor sit amet, consectetur adipiscing elit. CapCut bruges til hurtig og nem videoredigering."
+    description: "CapCut: Bruges til produktion af short form videoer til mine YouTube- og TikTok-kanaler."
   },
-  "content-writing": {
+  {
     label: "Content Writing",
     img: "img/content-writing.png",
-    description: "Content Writing: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Content Writing bruges til tekstproduktion."
+    description: "Content Writing: Bruges til blogskrivning hos Wedio samt tekstproduktion for Grobowski."
   },
-  indesign: {
+  {
     label: "InDesign",
     img: "img/indesign.png",
-    description: "InDesign: Lorem ipsum dolor sit amet, consectetur adipiscing elit. InDesign bruges til layout og design af tryksager."
+    description: "InDesign: Bruges i forbindelse med min uddannelse som multimediedesigner til layout og design af tryksager."
   },
-  illustrator: {
+  {
     label: "Illustrator",
     img: "img/illustrator.png",
-    description: "Illustrator: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illustrator bruges til vektorgrafik."
+    description: "Illustrator: Bruges i forbindelse med min uddannelse som multimediedesigner til vektorgrafik og grafisk design."
   },
-  photoshop: {
+  {
     label: "Photoshop",
     img: "img/photoshop.png",
-    description: "Photoshop: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Photoshop bruges til billedredigering."
+    description: "Photoshop: Bruges i forbindelse med min uddannelse som multimediedesigner, samt til at lave thumbnails til mine YouTube-videoer."
   }
-};
+];
