@@ -2,19 +2,19 @@
 @font-face {
   font-family: "Pixelify";
   src: url(../fonts/PixelifySans-VariableFont_wght.ttf) format("truetype");
-  font-weight: 100 900; /* variable range */
+  font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
   src: url(../fonts/Inter-VariableFont_opsz_wght.ttf) format("truetype");
-  font-weight: 100 900; /* variable range */
+  font-weight: 100 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Roboto";
   src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf) format("truetype");
-  font-weight: 100 900; /* variable range */
+  font-weight: 100 900;
   font-style: normal;
 }
 body {
@@ -162,7 +162,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
-  border: 2px solid #4f46e5; /* moderne accentfarve */
+  border: 2px solid #4f46e5;
   margin-right: 18px;
 }
 
@@ -223,7 +223,6 @@ img {
   font-family: "Roboto", sans-serif;
 }
 
-/* Tabs */
 .cv-tabs {
   display: flex;
   margin-bottom: 18px;
@@ -271,7 +270,6 @@ img {
   font-family: "Inter", sans-serif;
 }
 
-/* Skills section */
 .skills-section {
   border-radius: 12px;
   padding: 0;
@@ -798,7 +796,7 @@ img {
   font-family: "Inter", sans-serif;
   font-size: 1.1em;
   color: #333333;
-  margin-bottom: 6px; /* lidt afstand til input */
+  margin-bottom: 6px;
 }
 
 .kontakt-form input,
@@ -850,7 +848,7 @@ img {
     display: none;
     width: 48px;
     height: 48px;
-    margin: 0 auto 90px auto; /* top 0, horisontal auto (centreret), bottom 90px */
+    margin: 0 auto 90px auto;
     background: #000000;
     color: #ffffff;
     border: none;

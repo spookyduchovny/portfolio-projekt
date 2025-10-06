@@ -2,16 +2,16 @@
 @use '../layout/colors' as c;
 
 .skip-link {
-  position: absolute;
-  top: -40px;
+  position: absolute;      // Absolut position, så linket kan "springe ind" uden at påvirke layout
+  top: -40px;              // Starter skjult
   left: 0;
   background: c.$black;
   color: c.$white;
   padding: 8px 16px;
-  z-index: 1000;
-  transition: top 0.2s;
+  z-index: 1000;           // Sørger for at linket ligger ovenpå alt andet indhold
+  transition: top 0.2s;    // Giver en blød animation når linket flyttes ned
 }
 
 .skip-link:focus {
-  top: 0;
+  top: 0;                  // Når linket får fokus (via keyboard), flyttes det ned og bliver synligt
 }

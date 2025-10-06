@@ -11,24 +11,24 @@
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; // Sikrer at indhold ikke "stikker udenfor" rounded corners
 }
 
 .backpack-icons {
-  flex: 2;
+  flex: 2; // Flex-grow, giver mere plads til ikon-gitteret
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   padding: 24px;
-  overflow-y: auto;
+    overflow-y: auto; // Gør ikoner scrollbare hvis de fylder for meget
 }
 
 .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer; // Vis at ikonet kan klikkes
+  transition: transform 0.2s, box-shadow 0.2s; 
   font-family: f.$base-font;
 }
 
@@ -50,7 +50,7 @@
 
 .icon:hover img,
 .icon.selected img {
-  transform: translateY(-3px);
+  transform: translateY(-3px); // Flytter billedet lidt op ved hover eller når det er valgt
 }
 
 .backpack-divider {
@@ -62,14 +62,14 @@
 }
 
 .backpack-description {
-  flex: 1;
+  flex: 1; // Flex-grow, fylder resten af pladsen
   background: c.$white;
   color: c.$text-dark;
   font-size: 1.1rem;
   padding: 24px;
   margin: 16px;
   border-radius: 16px;
-  overflow-y: auto;
+  overflow-y: auto; // Scrollbar hvis beskrivelsen er for lang
   display: flex;
   align-items: flex-start;
 }

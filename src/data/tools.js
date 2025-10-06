@@ -1,4 +1,5 @@
 "use strict";
+//Her eksporteres alle værktøjer som skal vises i min backpack. Det er opsat så man nemt kan tilføje nye værktøjer.
 
 export const tools = [
   {

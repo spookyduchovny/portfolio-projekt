@@ -1,19 +1,17 @@
-"use strict";
+'use strict';
 
-import { tools } from "../data/tools.js";
-import { initCvTabs } from "../interactivity/tabsInteractivity.js";
-import { renderBackpack } from "../ui-components/backpack.js";
-import { initBackpackInteractivity } from "../interactivity/backpackInteractivity.js";
-import { initBackButtons } from "../interactivity/navigation.js";
+import { tools } from "../data/tools.js"; // Importerer data om værktøjer til backpack
+import { initCvTabs } from "../interactivity/tabsInteractivity.js"; // Importerer funktion til CV faner
+import { renderBackpack } from "../ui-components/backpack.js"; // Importerer funktion der laver backpack UI
+import { initBackpackInteractivity } from "../interactivity/backpackInteractivity.js"; // Importerer interaktivitet til backpack
 
 export function initCvPage() {
-  // Bind tab interactivity på de eksisterende HTML-tabs
+  // Aktiver faner på CV-siden
   initCvTabs();
 
-  // Back buttons
-  initBackButtons();
-
-  // Backpack
+  // Render backpack-komponent på siden
   const { iconsWrapper, descBox } = renderBackpack('#backpack', tools);
+
+  // Tilføj interaktiv funktionalitet til backpacken
   initBackpackInteractivity(tools, iconsWrapper, descBox);
 }

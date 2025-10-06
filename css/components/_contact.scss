@@ -26,8 +26,8 @@
 .kontakt-img {
   width: 180px;
   height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: cover; // Sikrer at billedet ikke bliver strukket  
+  border-radius: 50%; // Gør billedet cirkelformet 
   margin-bottom: 18px;
   border: 2px solid c.$blue-light;
 }
@@ -84,7 +84,7 @@
   font-family: f.$base-font;
   font-size: 1.1em;
   color: c.$text-dark;
-  margin-bottom: 6px; /* lidt afstand til input */
+  margin-bottom: 6px; 
 }
 
 .kontakt-form input,
@@ -97,7 +97,7 @@
   background: c.$gray-light;
   color: c.$text-dark;
   outline: none;
-  resize: none;
+  resize: none; // Forhindrer ændring af textarea størrelse
   width: 100%;
   box-sizing: border-box;
 }

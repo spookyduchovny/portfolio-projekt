@@ -7,18 +7,18 @@
 @media (max-width: 900px) {
 
   .img-man {
-    display: none !important;
+    display: none !important; // Skjul billede på tablet/mobil
   } 
   
   body{
-    padding-top: 0;
+    padding-top: 0; // Fjerner ekstra top-padding da der ikke er noget hus, det er i nederste nav bar.
   }
 
   .scroll-top-btn {
     display: none;
     width: 48px;
     height: 48px;
-    margin: 0 auto 90px auto; /* top 0, horisontal auto (centreret), bottom 90px */
+    margin: 0 auto 90px auto; 
     background: c.$black;
     color: c.$white;
     border: none;
@@ -28,16 +28,16 @@
   }
 
   .scroll-top-btn:focus {
-    outline: 2px solid c.$white;
+    outline: 2px solid c.$white; // Vis knap, når brugeren scroller
   }
 
   .scroll-top-btn.show {
-    display:block;
+    display:block; // Vis knap, når brugeren scroller
   }
 
   .container-main {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; // Skift fra grid til kolonne-layout
     align-items: center;
     justify-content: center;
     gap: 2rem;
@@ -117,7 +117,7 @@
   }
 
   .bottom-header, .bottom-bar {
-    display: none !important;
+    display: none !important; // Skjul desktop-menu på tablet/mobil
   }
 
   .mobile-taskbar {

@@ -2,7 +2,7 @@
 @use '../layout/colors' as c;
 
 .container-main {
-  display: grid;
+  display: grid; // Grid-layout for hovedsektionen så man bedre kan styre responsivitet
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto; 
   grid-template-areas:

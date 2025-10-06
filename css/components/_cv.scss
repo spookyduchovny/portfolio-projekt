@@ -20,7 +20,7 @@
   border-radius: 18px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; // Skjul indhold der går udenfor rammen
 }
 
 .cv-profile {
@@ -30,11 +30,11 @@
 }
 
 .cv-img {
-  width: clamp(120px, 12vw, 180px);
+  width: clamp(120px, 12vw, 180px); // Responsivt billede, min/max størrelse
   height: clamp(120px, 12vw, 180px);
-  object-fit: cover;
+  object-fit: cover; // Sikrer korrekt proportioner
   border-radius: 20px;
-  border: 2px solid c.$accent; /* moderne accentfarve */
+  border: 2px solid c.$accent; 
   margin-right: 18px;
 }
 
@@ -50,7 +50,7 @@
   margin-bottom: 12px;
   margin-top: 0;
   color: c.$accent;
-  border-bottom: 2px solid c.$gray-border;
+  border-bottom: 2px solid c.$gray-border; // Visuel adskillelse af sektioner
   padding-bottom: 0.5rem;
   font-family: f.$heading-font;
 }
@@ -81,7 +81,7 @@
   margin-right: 0.6rem;
   color: c.$accent;
   font-size: 1.3rem;
-  flex-shrink: 0;
+  flex-shrink: 0; // Sørger for at ikonet ikke skaleres
 }
 
 .cv-right h3 {
@@ -95,7 +95,7 @@
   font-family: f.$heading-font;
 }
 
-/* Tabs */
+//Tabs
 .cv-tabs {
   display: flex;
   margin-bottom: 18px;
@@ -120,7 +120,7 @@
 }
 
 .cv-tab:last-child {
-  border-right: none;
+  border-right: none; // Fjern border på sidste tab
 }
 
 .cv-tab.active,
@@ -143,7 +143,7 @@
   font-family: f.$base-font;
 }
 
-/* Skills section */
+//Skills
 .skills-section {
   border-radius: 12px;
   padding: 0; 

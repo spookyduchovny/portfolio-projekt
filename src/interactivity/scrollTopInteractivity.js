@@ -1,20 +1,23 @@
 export function initScrollTopButton(btn) {
+  // Stop funktionen, hvis knappen ikke findes. Som f.eks. i desktop udgaven.
   if (!btn) return;
 
-  // Scroll til toppen ved klik
+  // Når brugeren klikker på knappen, scrolles der blødt op til toppen af siden
   btn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Scroll event: vis knap kun hvis man scroller
+  // Når brugeren scroller på siden:
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {  // ved 200px
-      btn.classList.add("show");
+    // Hvis man har scrollet mere end 200px ned, vis knappen
+    if (window.scrollY > 200) {
+      btn.classList.add("show"); // Gør knappen synlig
     } else {
-      btn.classList.remove("show");
+      btn.classList.remove("show"); // Skjul knappen igen
     }
   });
-    // Sørg for, at den starter skjult på desktop
+
+  // Sørger for, at knappen er skjult fra start, hvis skærmen er bredere end 900px (desktop)
   if (window.innerWidth > 900) {
     btn.style.display = "none";
   }
